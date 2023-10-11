@@ -1,0 +1,23 @@
+list = []
+N= int(input())
+for _ in range (N):
+    given = input().split()
+    if given[0]=="insert":
+        i=int(given[1])
+        e=int(given[2])
+        list.insert(i, e)
+    elif given[0]=="remove":
+       e=int(given[1]) 
+       list.remove(e)
+    elif given[0]=="pop":
+        list.pop()
+    elif given[0]=="sort":
+        list.sort()
+    elif given[0]=="reverse":
+        list.reverse()
+    elif given[0]=="append":
+       e=int(given[1])
+       list.append(e)
+    elif given[0]=="print":
+        print(list)
+        
