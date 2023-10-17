@@ -1,0 +1,28 @@
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        if len(t)!=len(s):
+           return false 
+        else:
+            for i in t:
+                if i in s :
+                    return t
+                else:
+                        break 
+                 
+                  
+                  
+                  or 
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        if len(t)!=len(s):
+           return False 
+        else:
+            given = list(t)
+            anagram= list(s)
+            given.sort()
+            anagram.sort()
+            if given == anagram :
+                return True 
+            else :
+                 return                  
+                  
