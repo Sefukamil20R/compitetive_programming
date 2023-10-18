@@ -1,0 +1,59 @@
+class Solution:
+    def romanToInt(self, s: str) -> int:
+        output=0
+        soln= {
+            'I':1,
+            'V':5,
+            'X':10,
+            'L':50,
+            'C':100,
+            'D':500,
+            'M':1000
+class Solution:
+    def romanToInt(self, s: str) -> int:
+        output=0
+        soln= {
+            'I':1,
+            'V':5,
+            'X':10,
+            'L':50,
+            'C':100,
+            'D':500,
+            'M':1000
+        }
+        n= len(s)
+        i=0
+        while i<n-1:
+            f=soln[s[i]]
+            x=soln[s[i+1]]
+            if i<n-1 and f<x:
+                output+=x-f
+                i=i+2
+            elif i<n:
+              output+=soln[s[i]]
+              i=i+1
+       
+        if i == n - 1:
+            output += soln[s[i]]
+
+
+       
+        return output        }
+        n= len(s)
+        i=0
+        while i<n-1:
+            f=soln[s[i]]
+            x=soln[s[i+1]]
+            if i<n-1 and f<x:
+                output+=x-f
+                i=i+2
+            elif i<n:
+              output+=soln[s[i]]
+              i=i+1
+       
+        if i == n - 1:
+            output += soln[s[i]]
+
+
+       
+        return output
