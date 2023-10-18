@@ -1,0 +1,10 @@
+class Solution:
+    def missingNumber(self, nums: List[int]) -> int:
+        n=len(nums)
+        
+        check = ["no"]*(n+1)
+        for i in nums:
+                check[i]= "yes"
+        for j in range(n+1):
+            if check[j] == "no":
+                return j
