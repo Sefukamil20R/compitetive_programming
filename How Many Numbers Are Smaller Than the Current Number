@@ -1,0 +1,14 @@
+class Solution:
+    def smallerNumbersThanCurrent(self, nums: List[int]) -> List[int]:
+        bucket = [0] * 101
+        for num in nums:
+            bucket[num] += 1
+        for i in range(1, len(bucket)):
+            bucket[i] += bucket[i-1]
+        for i in range(len(nums)):
+            pos = nums[i]
+            if pos == 0:
+                nums[i] = 0
+            else:
+                nums[i] = bucket[pos-1]
+        return nums
