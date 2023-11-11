@@ -1,0 +1,32 @@
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+                hashset = set()
+
+                for n in nums:
+                    if n in hashset:
+                        return True
+                    hashset.add(n)
+                return False
+        
+        
+        or 
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+                hashset = Counter(nums)
+
+                for n in nums:
+                  if hashset[n] > 1:
+                      return True 
+                return False 
+        
+        using Two pointers 
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        nums.sort()
+        l=0
+        for r in range(l+1,len(nums)):
+            if nums[r]==nums[l]:
+            return True 
+            else:
+                    l+=1
+        return False 
