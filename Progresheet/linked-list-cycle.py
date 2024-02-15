@@ -14,6 +14,9 @@ class Solution:
             fast = fast.next.next
             if slow == fast:
                 return True
+            # if there is no cycle in the linkedlist fast will be go to none 
+            # but if there is cycle as fast is moving twice as slow will be equal to slow 
+            # back with out getting none 
           
         return False 
 
