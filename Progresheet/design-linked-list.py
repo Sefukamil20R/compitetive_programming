@@ -3,6 +3,7 @@ class Node:
   
     self.value = value
     self.next = None
+
     
       
 
@@ -14,10 +15,14 @@ class MyLinkedList:
 
     def __init__(self):
         self.head = Node()
+        # object creation
         
 
     def get(self, index: int) -> int:
         index += 1
+        # this is done coz the actual counting starts from dummy headnode
+        # but when user enter 0 means they want to consider the actual firts node so 
+        # to pass the dummy node we have to increment it 
         temp = self.head
         for _ in range(index):
             if temp == None:
