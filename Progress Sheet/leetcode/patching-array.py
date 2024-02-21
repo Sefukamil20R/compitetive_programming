@@ -3,7 +3,7 @@ class Solution:
         cover,patches,i   = 0 , 0 , 0
     
        
-        while  cover < n:
+        while cover < n:
             if i < len(nums) and  nums[i] <= cover + 1 :
                 cover += nums[i]
                 i += 1
