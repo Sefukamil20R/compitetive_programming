@@ -16,6 +16,6 @@ class Solution:
             elif val == 1:
                 left = mid
             else:
-                return mid
+                return mid 
         return right
         
